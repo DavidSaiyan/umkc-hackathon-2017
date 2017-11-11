@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/Hackathon-Project/"/> <!-- The base URL needs to point to the root directory -->
+    <title>UMKC Hackathon 2017 | Image Processing </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--<script src="http://code.angularjs.org/1.2.13/angular.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="node_modules/angularjs-social-login/angularjs-social-login.js"></script>
+
+    <!-- Modules -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.router.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/pages/home.controller.js"      type="application/javascript"></script>
+    <!-- Directives -->
+    <script src="app/directives/nav.directive.js"  type="application/javascript"></script>
+    <script src="app/directives/imageForm.directive.js"  type="application/javascript"></script>
+
+    <!-- Services -->
+    <script src="app/services/clarifai.service.js"      type="application/javascript"></script>
+</head>
+<body>
+    <div ng-app="app">
+        <menu-nav></menu-nav>
+        <div class="body-wrapper">
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+</html>

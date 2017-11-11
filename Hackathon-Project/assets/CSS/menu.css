@@ -1,0 +1,15 @@
+.menu_item {
+    width: 100%;
+    align-content: center;
+    margin-left: 10px;
+}
+
+.menu_row {
+    margin-bottom: 20px;
+    height: 30px;
+    background-color: #242B38;
+    color: white;
+    font-family: Raleway;
+    font-weight: bolder;
+    font-size: 20px;
+}

@@ -1,0 +1,44 @@
+.search_box{
+    width:100%;
+}
+
+.search-box{
+    align-content: center;
+}
+
+.title-name{
+    font-weight:bold;
+    color: midnightblue;
+    margin: 10px 10px 5px 10px;
+}
+
+.search-result-description{
+    margin-left: 25px;
+}
+
+.search-result-thumbnail{
+    height: 75px;
+    width: 100px;
+    margin-left: 25px;
+    border: solid;
+}
+
+.image-holder{
+    height: 180px;
+    width: 320px;
+    max-height: 180px;
+    max-width: 320px;
+    margin: 10px;
+    box-shadow: #242B38;
+}
+
+.image-form-window{
+    max-height: 450px;
+    margin: 5px;
+    overflow-y: auto;
+}
+
+.image-button-margin{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

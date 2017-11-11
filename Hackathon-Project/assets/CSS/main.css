@@ -1,0 +1,50 @@
+﻿/* Page Header */
+@import 'menu.css';
+@import 'forms.css';
+
+.body-wrapper{
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 400px;
+}
+
+.avatar_img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+
+.margin-bottom{
+    margin-bottom:10px;
+}
+.error {
+    color: red;
+}
+
+.centered {
+    align-content: center;
+}
+
+.margin{
+    margin: 20px;
+}
+.margin-top{
+    margin-top: 10px;
+}
+
+.menu_row {
+    height: 30px;
+    background-color: #01010a;
+    color: white;
+    font-family: Raleway;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.border_round{
+    margin-top: 100px;
+    border: 4px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
