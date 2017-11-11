@@ -1,8 +1,0 @@
-{
-    "name": "UMKC Hackathon Image Processor",
-    "main": "index.html",
-    "dependencies": {
-        "angular":"^1.6.6",
-        "angular-social-login":"^0.0.1"
-    }
-}
