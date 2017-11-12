@@ -32,13 +32,62 @@
     box-shadow: #242B38;
 }
 
+.image-holder:hover{
+    cursor: pointer;
+}
+
+.image-holder-selected{
+    border: 2px lightblue solid;
+}
+
 .image-form-window{
-    max-height: 450px;
+    max-height: 800px;
     margin: 5px;
     overflow-y: auto;
 }
 
 .image-button-margin{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.spacing{
+    margin: 5px;
+}
+
+.image-icons{
+    align-text:center;
+    align-content: center;
+}
+
+.image-icons:hover{
+    color: deepskyblue;
+    box-shadow: gray;
+    cursor: pointer;
+}
+
+.analysis-box{
+    height: 160px;
+    margin: 10px 5px 5px 5px;
+    background-color: #ecfffd;
+}
+
+.absolute-position{
+    position: absolute;
+}
+
+.relative-position{
+    position: relative;
+}
+
+.tag-box{
+    z-index: 10;
+    left: 50px;
+    top: 70px;
+}
+
+.tag-box:hover{
+    border-color: red;
+    color: red;
+}
+

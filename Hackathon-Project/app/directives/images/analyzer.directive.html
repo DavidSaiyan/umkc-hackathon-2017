@@ -1,0 +1,29 @@
+<div class="col-md-12">
+    <div class="row title-name"> Image Analyzer Module </div>
+    <div class="row">
+        <!--<div class="tag-box fa fa-circle-o"> </div>-->
+        <div class="row centered">
+            <img class="thumb analyzer-image" ng-src="{{image.Image}}"/>
+        </div>
+    </div>
+    <div ng-if="image" class="row centered">
+        <div class="col-md-4 image-icons" ng-click="analyze()">
+            <!--<span class="tooltiptext">Analyze</span>-->
+            <i class="fa fa-superpowers fa-2x"></i> Analyze
+        </div>
+        <div class="col-md-4 image-icons" ng-click="analyze()">
+            <!--<span class="tooltiptext">Find Similar Images</span>-->
+            <i class="fa fa-search fa-2x "></i> Find Similar
+        </div>
+        <div class="col-md-4 image-icons">
+            <!--<span class="tooltiptext">Remove This Image</span>-->
+            <i class="fa fa-trash fa-2x "></i> This Sucks
+        </div>
+    </div>
+    <div ng-if="results.length" class="row centered">
+        <infobox results="results"></infobox>
+    </div>
+    <div class="tooltip"> highlight my face
+        <span class="tooltiptext"> This is a tooltip </span>
+    </div>
+</div>

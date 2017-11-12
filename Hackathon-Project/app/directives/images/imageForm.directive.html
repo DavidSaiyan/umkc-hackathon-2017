@@ -1,0 +1,23 @@
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <input class="form-control" type="file" ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple/>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" type="text" placeholder="http:// image url " ng-model="imageUrl"/>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default form control" ng-click="loadFromUrl(imageUrl)"> Get Image! </button>
+                </div>
+            </div>
+            <div  class="row image-form-window">
+                <div ng-repeat="imge in imageList">
+                    <images image="imge"></images>
+                </div>
+                <div ng-if="imageList.length == 0"> Please choose an image file or type an image url to begin! </div>
+            </div>
+        </div>
+    </div>
+</div>

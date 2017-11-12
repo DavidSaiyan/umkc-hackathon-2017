@@ -1,0 +1,15 @@
+
+.analyzer-image{
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    max-height: 360px;
+    max-widght: 640px;
+}
+
+
+.result-rows{
+    font-weight: bold;
+    border-bottom: 1px black solid;
+    margin: 3px 3px 3px 20px;
+}

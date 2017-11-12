@@ -8,7 +8,7 @@
                 $logProvider.debugEnabled(true),
                 $routeProvider
                 .when('/home', {
-                    templateUrl: 'app/pages/home.controller.html',
+                    templateUrl: 'app/controllers/home.controller.html',
                     controller: 'Home as vm'
                 }).otherwise({
                     redirectTo: '/home'

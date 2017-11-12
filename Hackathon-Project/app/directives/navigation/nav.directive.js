@@ -10,7 +10,7 @@
     function navigation($rootScope, $window, baseUrl, appName) {
         return {
             restrict: 'E',
-            templateUrl: 'app/directives/nav.directive.html',
+            templateUrl: 'app/directives/navigation/nav.directive.html',
             link: link
         };
 

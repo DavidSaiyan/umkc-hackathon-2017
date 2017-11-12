@@ -9,31 +9,38 @@
 
     function clarifaiService($http, apiKey) {
         var factory = {
-            analyze: analyze
+            analyze: analyze,
+            analyzeUrl: analyzeUrl
         };
         return factory;
 
-         function analyze(text) {
-             return $http.get('https://www.googleapis.com/youtube/v3/search', {
-                 params: {
-                     key: apiKey,
-                     type: 'video',
-                     maxResults: '10',
-                     pageToken: '',
-                     part: 'id,snippet',
-                     fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken',
-                     q: text
+         function analyze(image) {
+             var data = {pic: image};
+             console.log('Attempting to predict image');
+             return $http.post('http://localhost:4215/api/clarifai/predictraw', data).then(
+                 function(response) {
+                     console.log(response);
+                     return response.data.concepts;
+                 },
+                 function(err) {
+                     console.log(err);
+                     return err;
                  }
-             }).then(function(response) {
-                 if (response.data.items.length === 0) {
-                     return 'The search did not return any results'
-                 }else{
-                     return response.data.items;
-                 }
-             }, function(error){
-                 console.log(error);
-                 return error.data.error.errors.message;
-             });
+             );
          }
+
+        function analyzeUrl(imageUrl) {
+            console.log('Attempting to predict image');
+            return $http.post('http://localhost:4215/api/clarifai/predict/', {url: imageUrl}).then(
+                function(response) {
+                    console.log(response);
+                    return response.data.concepts;
+                },
+                function(err) {
+                    console.log(err);
+                    return err;
+                }
+            );
+        }
     }
 })();
