@@ -15,15 +15,12 @@
             <!--<span class="tooltiptext">Find Similar Images</span>-->
             <i class="fa fa-search fa-2x "></i> Find Similar
         </div>
-        <div class="col-md-4 image-icons">
+         <div class="col-md-4 image-icons" ng-click="analyzeLogo()">
             <!--<span class="tooltiptext">Remove This Image</span>-->
-            <i class="fa fa-trash fa-2x "></i> This Sucks
+            <i class="fa fa-ravelry fa-2x "></i> Find Logo
         </div>
     </div>
-    <div ng-if="results.length" class="row centered">
-        <infobox results="results"></infobox>
-    </div>
-    <div class="tooltip"> highlight my face
-        <span class="tooltiptext"> This is a tooltip </span>
+    <div ng-if="results.length || errs" class="row centered">
+        <infobox results="results" errors="errs"></infobox>
     </div>
 </div>

@@ -19,6 +19,19 @@ function predict(image){
     );
 }
 
+function predictLogo(image){
+    return app.models.predict(Clarifai.LOGO_MODEL, image).then(
+        function(response) {
+            console.log(response);
+            return response;
+        },
+        function(err) {
+            console.log(err);
+            return err;
+        }
+    );
+}
+
 function predictBase64(image){
     console.log('Attemping to processs base 64 image');
     return app.models.predict(Clarifai.GENERAL_MODEL,  {base64: image}).then(
@@ -36,5 +49,6 @@ function predictBase64(image){
 
 module.exports = {
     predict: predict,
-    predictBase64: predictBase64
+    predictBase64: predictBase64,
+    predictLogo: predictLogo
 }

@@ -11,14 +11,17 @@
         return {
             restrict: 'E',
             scope: {
-                results: '='
+                results: '=',
+                errors: '='
             },
                 templateUrl: 'app/directives/information/infobox.directive.html',
                 link: link
             };
 
         function link(scope) {
-
+            // scope.$watch('errors', function() {
+            //     alert('Error has occured!');
+            // });
         }
     }
 })();

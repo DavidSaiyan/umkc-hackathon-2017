@@ -10,7 +10,8 @@
     function clarifaiService($http, apiKey) {
         var factory = {
             analyze: analyze,
-            analyzeUrl: analyzeUrl
+            analyzeUrl: analyzeUrl,
+            analyzeLogo: analyzeLogo
         };
         return factory;
 
@@ -35,6 +36,20 @@
                 function(response) {
                     console.log(response);
                     return response.data.concepts;
+                },
+                function(err) {
+                    console.log(err);
+                    return err;
+                }
+            );
+        }
+
+        function analyzeLogo(imageUrl) {
+            console.log('Attempting to predict image');
+            return $http.post('http://localhost:4215/api/clarifai/predict/logo', {url: imageUrl}).then(
+                function(response) {
+                    console.log(response);
+                    return response.data.regions[0].data.concepts;
                 },
                 function(err) {
                     console.log(err);

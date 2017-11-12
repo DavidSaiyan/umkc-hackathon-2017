@@ -7,9 +7,19 @@
     max-widght: 640px;
 }
 
+.result-box{
+    overflow-y: auto;
+    max-height: 300px;
+}
 
 .result-rows{
     font-weight: bold;
     border-bottom: 1px black solid;
     margin: 3px 3px 3px 20px;
+}
+
+.error {
+    color: red;
+    font-weigth: bold;
+    margin: 20px 3px 3px 20px;
 }

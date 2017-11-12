@@ -1,9 +1,6 @@
 {
-    "name": "HackathonApp",
-    "web": "node server.js",
-    "main": "server.js",
-    "version":"1.0.0",
-    "dependencies": {
-        "clarifai": "2.4.0"
-    }
+  "name": "HackathonAppDSWNIS",
+  "main": "index.html",
+  "version": "1.0.0",
+  "dependencies": {}
 }

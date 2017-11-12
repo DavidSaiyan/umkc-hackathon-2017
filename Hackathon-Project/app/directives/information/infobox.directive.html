@@ -1,11 +1,14 @@
 <div>
-    <div class="col-md-12">
+    <div ng-show="errors" class="col-md-12">
+        <div class="error"> {{errors}}</div>
+    </div>
+    <div ng-show="!errors" class="col-md-12">
         <div class="row">
            <div class="title-name">
                 The Prediction Returned the Following Related Terms
            </div>
         </div>
-        <div class="row">
+        <div class="row result-box">
             <div class="row title-name result-rows">
                 <div class="col-md-3">
                     Topic:

@@ -36,6 +36,25 @@ router.route('/clarifai/predict').post(function(req, res){
         }
     });
 
+
+router.route('/clarifai/predict/logo').post(function(req, res){
+    try {
+        console.log('Requesting prediction for clarifai image');
+        var image = req.body.url;
+
+        console.log(image);
+
+        clarifai.predictLogo(image).then(function (resp){
+            res.json(resp.outputs[0].data);
+        }, function (err){
+            res.json(err);
+        });
+    }catch (e){
+        res.code = 500;
+        res.json({msg: e});
+    }
+});
+
 router.route('/clarifai/predictraw').post(function(req, res){
     try {
         console.log('Requesting prediction for clarifai image');
