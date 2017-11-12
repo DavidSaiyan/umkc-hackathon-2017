@@ -18,42 +18,6 @@ app.use(function(req, res, next) {
 var port = process.env.PORT || 4215;
 var router = express.Router();
 
-// Routing Middleware
-router.use(function(req, res, next) {
-    //console.log("req");
-    next();
-});
-
-router.route('/lab10/insert')
-    .post(function(req, res) {
-
-        console.log(req);
-        var food = {
-            name: req.body.name,
-            type: req.body.type
-        }
-
-        mongo.addObject("Lab10Collection", food);
-
-        res.json({ message: "Successfully added " + food.name + " to the database"})
-    });
-
-router.route('/lab10/delete')
-    .post(function(req, res) {
-        try {
-            var food = {
-                name: req.body.name
-            };
-
-            mongo.removeObject("Lab9Collection", food);
-
-            res.json({message: "Successfully removed " + food.name + " from the database"})
-        }catch (e){
-            res.code = 500;
-            res.json({msg: e});
-        }
-    });
-
 router.route('/clarifai/predict').post(function(req, res){
         try {
             console.log('Requesting prediction for clarifai image');
@@ -85,15 +49,6 @@ router.route('/clarifai/predictraw').post(function(req, res){
         res.code = 500;
         res.json({msg: e});
     }
-});
-
-
-router.get('/yelp/:terms/:language', function(req, res) {
-    res.json({message: "yelp endpoint"});
-});
-
-router.get('/', function(req, res) {
-    res.json({msg: 'lab 10 api!'})
 });
 
 
