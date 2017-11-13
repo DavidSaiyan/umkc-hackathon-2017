@@ -2,7 +2,6 @@
 var express    = require('express');
 var app        = express();
 var bodyParser = require('body-parser');
-var mongo      = require('./app/services/mongo');
 var clarifai   = require('./app/services/clarif');
 
 //Configure App
